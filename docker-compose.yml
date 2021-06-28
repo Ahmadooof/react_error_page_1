@@ -1,0 +1,29 @@
+#the docker compose file version
+version: "3.8"
+# you can run multiple services inside one docker compose file
+# define them with their dependencies one after the other
+services:
+  # service 1 named react-prod
+  react:
+    # service 1 container name
+    container_name: error_con
+    build:
+      # the context (working directory) is the current directory
+      # change this to the directory containing the dockerfile if in a different place
+      context: .
+      # the dockerfile to be run
+      dockerfile: Dockerfile
+    volumes:
+      - share_vol:/app/build
+      # - ./:/app
+    # ports:
+    #   - 3333:3333
+    # this to make container keep alive.
+    # command: tail -F anything
+
+volumes:
+  share_vol:
+    name: react_error
+
+  # --------------------- build --------------------
+  # docker-compose -f "docker-compose.yml" up -d --build
