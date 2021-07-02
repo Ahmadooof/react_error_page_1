@@ -2,7 +2,7 @@
   "name": "eroor_page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ahmadooof.github.io/react_error_page_1/",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d dist"
+    "deploy": "react-scripts deploy"
   },
   "eslintConfig": {
     "extends": [
